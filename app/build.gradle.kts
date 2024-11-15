@@ -50,7 +50,6 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
@@ -60,5 +59,47 @@ dependencies {
     implementation (libs.androidx.room.runtime)
     annotationProcessor (libs.androidx.room.compiler)
     implementation (libs.androidx.room.ktx)
+
+    // Testing
+    testImplementation(libs.junit)
+
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Room DataBase
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
+    // Firebase
+    implementation(libs.firebase.messaging)
+    implementation(libs.firebase.database)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.storage)
+
+    // Networking
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp.logging.interceptor)
+    implementation(libs.okhttp)
+
+    // Other Libraries
+
+    implementation(libs.kotlinx.datetime)
+    implementation(libs.playservicesauth)
+    implementation(libs.libphonenumber)
+
+    // Timber for Logging
+    implementation(libs.timber)
+
+    // DataStore
+    implementation(libs.datastore.preferences)
+
+
 
 }
