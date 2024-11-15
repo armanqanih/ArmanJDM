@@ -1,11 +1,12 @@
-import org.jetbrains.kotlin.gradle.model.Kapt
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.dagger.hilt)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.firebase.crashlytics)
+
 }
 
 android {
@@ -60,10 +61,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    //Dagger
-    implementation(libs.dagger)
-    implementation(libs.hilt) // This references the Hilt Android dependency
-    kapt(libs.hiltCompiler)
+
     // Room DataBase
     implementation (libs.androidx.room.runtime)
     annotationProcessor (libs.androidx.room.compiler)
@@ -82,14 +80,22 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
-
+    //google service
+    implementation(libs.googleServices)
+    implementation(libs.dagger)
+    implementation(libs.hilt)
+    kapt(libs.hiltCompiler)
     // Firebase
+    implementation(libs.firebase.appcheck.safetynet)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.messaging)
     implementation(libs.firebase.database)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage)
+
 
     // Networking
     implementation(libs.retrofit)
