@@ -55,12 +55,44 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.play.services.auth)
+    implementation(libs.androidx.appcompat)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    //Icons
+    implementation(libs.compose.material.icons.extended)
+
+    //Test
+    testImplementation(libs.junit)
+    testImplementation(libs.mockito)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.truth)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.kotlin.test)
+
+    //coil
+    implementation(libs.coil.compose)
+
+
+    //SystemUiController
+    implementation(libs.accompanist.systemuicontroller)
+
+
+    //activity
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.activity.compose)
+
+
+    //hilt
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.dagger.hilt.android)
+    kapt(libs.dagger.hilt.compiler)
 
 
     //Material
