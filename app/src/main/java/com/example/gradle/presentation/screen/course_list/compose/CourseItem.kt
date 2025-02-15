@@ -1,6 +1,7 @@
 package com.example.gradle.presentation.screen.course_list.compose
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -34,6 +35,7 @@ import com.example.gradle.presentation.util.Dimens.SpaceSmall
 
 @Composable
 fun CourseItem (
+   onItemClick:()->Unit,
 
 ){
 
@@ -41,6 +43,7 @@ fun CourseItem (
         .fillMaxWidth()
         .padding(SpaceMedium)
         .clip(shape = RoundedCornerShape(30.dp))
+        .clickable {onItemClick() }
         .height(150.dp)
         .background(androidx.compose.material.MaterialTheme.colors.onBackground)
     , horizontalArrangement = Arrangement.Center,

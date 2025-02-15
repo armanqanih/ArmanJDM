@@ -12,6 +12,7 @@ import androidx.compose.ui.platform.SoftwareKeyboardController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.gradle.presentation.screen.cours_detail.CourseDetailScreen
 import com.example.gradle.presentation.screen.course_list.CourseScreen
 import com.example.gradle.presentation.screen.explore.ExploreScreen
 import com.example.gradle.presentation.screen.profile.ProfileScreen
@@ -44,13 +45,17 @@ fun NavigationApp(
                   ExploreScreen()
                 }
                 composable(route = ScreenNavigation.CourseListScreen.route) {
-                  CourseScreen()
+                  CourseScreen(onNavigateToDetailScreen = {
+                      navController.navigate(
+                      ScreenNavigation.ExploreScreen.route
+                      )
+                  })
                 }
                 composable(route = ScreenNavigation.ProfileScreen.route) {
                   ProfileScreen()
                 }
                 composable(route = ScreenNavigation.CourseDetail.route) {
-
+                    CourseDetailScreen()
                 }
 
 
