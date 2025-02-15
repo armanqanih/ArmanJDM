@@ -12,9 +12,10 @@ import androidx.compose.ui.platform.SoftwareKeyboardController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.gradle.presentation.screen.course_list.CourseScreen
+import com.example.gradle.presentation.screen.explore.ExploreScreen
+import com.example.gradle.presentation.screen.profile.ProfileScreen
 import com.example.gradle.ui.app.MainActivity
-
-
 
 
 @Composable
@@ -36,13 +37,21 @@ fun NavigationApp(
             val bottomPadding = paddingValues.calculateBottomPadding()
             NavHost(
                 navController = navController,
-                startDestination = ScreenNavigation.exploreScreen.route,
+                startDestination = ScreenNavigation.ExploreScreen.route,
                 modifier = Modifier.padding(bottom = bottomPadding)
             ) {
-                composable(route = ScreenNavigation.exploreScreen.route) {
+                composable(route = ScreenNavigation.ExploreScreen.route) {
+                  ExploreScreen()
+                }
+                composable(route = ScreenNavigation.CourseListScreen.route) {
+                  CourseScreen()
+                }
+                composable(route = ScreenNavigation.ProfileScreen.route) {
+                  ProfileScreen()
+                }
+                composable(route = ScreenNavigation.CourseDetail.route) {
 
                 }
-
 
 
             }
