@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.gradle.presentation.screen.course_list.compose.CourseItem
 import com.example.gradle.presentation.util.Dimens.SpaceSmall
 
 @Composable
@@ -30,11 +31,10 @@ fun CourseScreen(
             verticalArrangement = Arrangement.spacedBy(SpaceSmall),
         ) {
             item {
+                CourseItem()
 
-                Text(
-                    "CourseScreen",
-                    color = MaterialTheme.colors.onPrimary
-                )
+
+
             }
         }
     }
