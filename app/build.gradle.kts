@@ -7,6 +7,8 @@ plugins {
     alias(libs.plugins.google.services)
     alias(libs.plugins.firebase.crashlytics)
 
+    alias(libs.plugins.kotlin.serialization)
+
 }
 
 android {
@@ -63,6 +65,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+//    serializable
+    implementation(libs.kotlinx.serialization.json)
 
     //Icons
     implementation(libs.compose.material.icons.extended)
@@ -155,6 +160,23 @@ dependencies {
     // DataStore
     implementation(libs.datastore.preferences)
 
+//    Ktor
+    implementation("io.ktor:ktor-client-core:2.3.3") // Core Ktor Client
+    implementation("io.ktor:ktor-client-cio:2.3.3") // CIO Engine (for JVM/Android)
+    implementation("io.ktor:ktor-client-android:2.3.3") // Android-specific engine
+    implementation("io.ktor:ktor-client-serialization:2.3.3") // JSON Serialization
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.3") // Content Negotiation
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.3") // JSON Serializer
+
+    implementation("io.ktor:ktor-client-logging:2.3.3") // Logging Plugin
+    implementation("ch.qos.logback:logback-classic:1.4.7") // Optional: Logback for better logs
+    implementation("io.ktor:ktor-client-auth:2.3.3") // Ktor Authentication
+
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
+
+//    Coil3
+    implementation("io.coil-kt.coil3:coil-compose:3.1.0")
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.1.0")
 
 
 }

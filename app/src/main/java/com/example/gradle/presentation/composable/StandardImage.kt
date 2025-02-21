@@ -33,7 +33,7 @@ fun StandardImage(
     Image(
         painter = rememberAsyncImagePainter(
             model = ImageRequest.Builder(LocalContext.current)
-                .data(R.drawable.assasin)
+                .data(imageUrl)
                 .memoryCachePolicy(CachePolicy.ENABLED) // Enable caching
                 .diskCachePolicy(CachePolicy.ENABLED) // Enable disk caching
                 .crossfade(true)

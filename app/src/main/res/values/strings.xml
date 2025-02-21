@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Gradle</string>
+    <string name="dashboard">dashboard</string>
+    <string name="qr_code">qrcode</string>
+    <string name="support">support</string>
+    <string name="profile">profile</string>
+    <string name="wellcome">Wellcome</string>
+    <string name="login_to_access">Login</string>
+    <string name="username">user name</string>
+    <string name="password">password</string>
+    <string name="login">LogIn</string>
 </resources>
